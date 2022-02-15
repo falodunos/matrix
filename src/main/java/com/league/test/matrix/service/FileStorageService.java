@@ -4,6 +4,8 @@ package com.league.test.matrix.service;
 import com.league.test.matrix.config.AppConfig;
 import com.league.test.matrix.exceptions.FileStorageException;
 import com.league.test.matrix.exceptions.MyFileNotFoundException;
+import com.league.test.matrix.service.util.AppConstants;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
@@ -11,22 +13,20 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.nio.file.StandardCopyOption;
+import java.nio.file.*;
 
 @Service
+@Slf4j
 public class FileStorageService {
 
     private final Path fileStorageLocation;
 
     @Autowired
     public FileStorageService(AppConfig appConfig) {
-        System.out.println("appConfig.getUploadDir() " + appConfig);
-        this.fileStorageLocation = Paths.get(appConfig.getUploadDir())
+        this.fileStorageLocation = Paths.get(AppConstants.FILE_UPLOAD_PATH)
                 .toAbsolutePath().normalize();
 
         try {
@@ -46,9 +46,19 @@ public class FileStorageService {
             Path targetLocation = this.fileStorageLocation.resolve(fileName);
             Files.copy(file.getInputStream(), targetLocation, StandardCopyOption.REPLACE_EXISTING);
 
-            return fileName;
+            this.renameFile(fileName);
+
+            return AppConstants.TARGET_FILE_NAME;
         } catch (IOException ex) {
             throw new FileStorageException("Could not store file " + fileName + ". Please try again!", ex);
+        }
+    }
+
+    private void renameFile(String fileName) throws IOException {
+        File fileToMove = new File(AppConstants.FILE_UPLOAD_PATH + fileName);
+        boolean isMoved = fileToMove.renameTo(new File(AppConstants.TARGET_FILE_PATH));
+        if (!isMoved) {
+            throw new FileSystemException(AppConstants.TARGET_FILE_PATH);
         }
     }
 
@@ -64,5 +74,12 @@ public class FileStorageService {
         } catch (MalformedURLException ex) {
             throw new MyFileNotFoundException("File not found " + fileName, ex);
         }
+    }
+
+    public boolean hasCSVFormat(MultipartFile file) {
+        if (!AppConstants.FILE_TYPE.equals(file.getContentType())) {
+            return false;
+        }
+        return true;
     }
 }

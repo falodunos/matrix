@@ -1,11 +1,9 @@
 package com.league.test.matrix.exceptions;
 
-import com.drone.manager.model.api.ApiError;
-import org.hibernate.exception.ConstraintViolationException;
-import org.hibernate.exception.GenericJDBCException;
+
+import com.league.test.matrix.model.api.ApiError;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
-import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,10 +13,10 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException;
+import org.springframework.web.multipart.MaxUploadSizeExceededException;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
-import javax.persistence.EntityNotFoundException;
-import java.util.NoSuchElementException;
+import java.io.FileNotFoundException;
 import java.util.concurrent.ExecutionException;
 
 import static org.springframework.http.HttpStatus.BAD_REQUEST;
@@ -30,12 +28,6 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
     @ExceptionHandler(value = {IllegalArgumentException.class, IllegalStateException.class})
     protected ResponseEntity<Object> handleConflict(RuntimeException ex, WebRequest request) {
         ApiError apiError = new ApiError(HttpStatus.CONFLICT, ex.getMessage(), ex);
-        return buildResponseEntity(apiError);
-    }
-
-    @ExceptionHandler(value = {EntityNotFoundException.class, NoSuchElementException.class})
-    protected ResponseEntity<Object> handleEntityNotFound(RuntimeException ex, WebRequest request) {
-        ApiError apiError = new ApiError(HttpStatus.NOT_FOUND, ex.getMessage(), ex);
         return buildResponseEntity(apiError);
     }
 
@@ -51,37 +43,6 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
     protected ResponseEntity<Object> handleHttpMessageNotReadable(HttpMessageNotReadableException ex, HttpHeaders headers, HttpStatus status, WebRequest request) {
         String error = "Malformed JSON request";
         ApiError apiError = new ApiError(HttpStatus.BAD_REQUEST, error, ex);
-        return buildResponseEntity(apiError);
-    }
-
-    @ExceptionHandler(MissingEntityException.class)
-    protected ResponseEntity<Object> handleEntityNotFound(MissingEntityException ex) {
-        ApiError apiError = new ApiError(HttpStatus.NOT_FOUND, ex.getMessage(), ex);
-        return buildResponseEntity(apiError);
-    }
-
-    @ExceptionHandler(SmartCardNotFoundException.class)
-    protected ResponseEntity<Object> handleSmartCardNotFound(SmartCardNotFoundException ex) {
-        ApiError apiError = new ApiError(HttpStatus.BAD_REQUEST, ex.getMessage(), ex);
-        return buildResponseEntity(apiError);
-    }
-
-    @ExceptionHandler(InvalidReferenceIdException.class)
-    protected ResponseEntity<Object> handleMissingReferenceId(InvalidReferenceIdException ex) {
-        ApiError apiError = new ApiError(HttpStatus.BAD_REQUEST, ex.getMessage(), ex);
-        return buildResponseEntity(apiError);
-    }
-
-    @ExceptionHandler(value = {DuplicateUniqueIdException.class})
-    protected ResponseEntity<Object> handBadRequest(RuntimeException ex, WebRequest request) {
-        ApiError apiError = new ApiError(HttpStatus.BAD_REQUEST, ex.getMessage(), ex);
-        return buildResponseEntity(apiError);
-    }
-
-    @ExceptionHandler(value = {GenericJDBCException.class})
-    protected ResponseEntity<Object> handleGenericJDBCException(RuntimeException ex, WebRequest request) {
-        String msg = "Please check your parameters, database field for a missing default value, etc";
-        ApiError apiError = new ApiError(HttpStatus.BAD_REQUEST, msg, ex);
         return buildResponseEntity(apiError);
     }
 
@@ -119,21 +80,6 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
     }
 
     /**
-     * Handle DataIntegrityViolationException, inspects the cause for different DB causes.
-     *
-     * @param ex the DataIntegrityViolationException
-     * @return the ApiError object
-     */
-    @ExceptionHandler(DataIntegrityViolationException.class)
-    protected ResponseEntity<Object> handleDataIntegrityViolation(DataIntegrityViolationException ex,
-                                                                  WebRequest request) {
-        if (ex.getCause() instanceof ConstraintViolationException) {
-            return buildResponseEntity(new ApiError(HttpStatus.CONFLICT, "Database error", ex.getCause()));
-        }
-        return buildResponseEntity(new ApiError(HttpStatus.INTERNAL_SERVER_ERROR, ex));
-    }
-
-    /**
      * Handle Exception, handle generic Exception.class
      *
      * @param ex the Exception
@@ -150,5 +96,37 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
 
     private ResponseEntity<Object> buildResponseEntity(ApiError apiError) {
         return new ResponseEntity<>(apiError, apiError.getStatus());
+    }
+
+    @ExceptionHandler(MaxUploadSizeExceededException.class)
+    public ResponseEntity<Object> handleMaxSizeException(MaxUploadSizeExceededException ex) {
+        ApiError apiError = new ApiError(HttpStatus.EXPECTATION_FAILED);
+        apiError.setMessage("File is too large");
+        apiError.setDebugMessage(ex.getMessage());
+        return buildResponseEntity(apiError);
+    }
+
+    @ExceptionHandler(FileNotFoundException.class)
+    public ResponseEntity<Object> handleFileNotFoundException(FileNotFoundException ex) {
+        ApiError apiError = new ApiError(HttpStatus.NOT_FOUND);
+        apiError.setMessage("File Not Found");
+        apiError.setDebugMessage(ex.getMessage());
+        return buildResponseEntity(apiError);
+    }
+
+    @ExceptionHandler(InvalidMatrixException.class)
+    public ResponseEntity<Object> handleInvalidMatrixException(InvalidMatrixException ex) {
+        ApiError apiError = new ApiError(BAD_REQUEST);
+        apiError.setMessage("Invalid Matrix, Please specify a square matrix and try again");
+        apiError.setDebugMessage(ex.getMessage());
+        return buildResponseEntity(apiError);
+    }
+
+    @ExceptionHandler(NumberFormatException.class)
+    public ResponseEntity<Object> handleInvalidMatrixException(NumberFormatException ex) {
+        ApiError apiError = new ApiError(BAD_REQUEST);
+        apiError.setMessage("Invalid Matrix, Please specify integer elements and try again!");
+        apiError.setDebugMessage(ex.getMessage());
+        return buildResponseEntity(apiError);
     }
 }

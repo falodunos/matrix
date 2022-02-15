@@ -15,10 +15,6 @@ import org.springframework.web.client.RestTemplate;
 @Data
 public class AppConfig {
 
-     private String name;
-     private String environment;
-     private String uploadDir;
-
     /**
      * @return RestTemplate
      */

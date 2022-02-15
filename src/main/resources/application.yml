@@ -1,0 +1,23 @@
+#Defines or set active application profile: live or development
+spring.profiles.active: development
+
+---
+
+spring:
+  profiles: development
+  application.name: MatrixService
+  http.multipart.max-file-size: 10MB
+
+logging:
+  file: logs/application.log
+  file.max-size: 200MB
+  level:
+    org.apache.http: INFO
+    org.springframework.cloud.sleuth: INFO
+    org.springframework.web: INFO
+    com.netflix.discovery.DiscoveryClient: INFO
+    com.drone.manager: INFO
+    org.springframework.security: INFO
+server.port: 8090
+
+---
