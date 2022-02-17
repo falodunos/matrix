@@ -9,6 +9,13 @@ public class UploadFileResponse {
     private String fileType;
     private long size;
 
+    /**
+     * Constructor
+     * @param fileName
+     * @param fileDownloadUri
+     * @param fileType
+     * @param size
+     */
     public UploadFileResponse(String fileName, String fileDownloadUri, String fileType, long size) {
         this.fileName = fileName;
         this.fileDownloadUri = fileDownloadUri;

@@ -5,17 +5,13 @@ import com.league.test.matrix.dto.response.UploadFileResponse;
 import com.league.test.matrix.service.CsvFileProcessorService;
 import com.league.test.matrix.service.FileStorageService;
 import com.league.test.matrix.service.util.AppConstants;
-import com.opencsv.CSVReader;
 import com.opencsv.exceptions.CsvValidationException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
-
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
 @SuppressWarnings({"unchecked", "rawtypes"})
@@ -29,61 +25,89 @@ public class ApiController {
     @Autowired
     CsvFileProcessorService csvFileProcessorService;
 
+    /**
+     * Print the matrix representation of the supplied CSV file
+     * @param file
+     * @return
+     * @throws IOException
+     * @throws CsvValidationException
+     */
     @PostMapping("/echo")
     public String echo(@RequestParam("file") MultipartFile file) throws IOException, CsvValidationException {
 
-        BaseResponse uploadFileResponse = uploadFile(file);
+        BaseResponse uploadFileResponse = fileStorageService.uploadFile(file);
+        String matrix = "";
         if (uploadFileResponse.getStatus().equals("200")) {
-            String matrix = this.csvFileProcessorService.echo();
-            return matrix;
+            matrix = this.csvFileProcessorService.echo();
         }
-        return "unknown yet";
+        return matrix;
     }
 
+    /**
+     * Print the inverted matrix representation of the supplied CSV file
+     * @param file
+     * @return
+     * @throws CsvValidationException
+     * @throws IOException
+     */
     @PostMapping("/invert")
-    public String invert(@RequestParam("file") MultipartFile file) {
-        return null;
-    }
-
-    @PostMapping("/flatten")
-    public String flatten(@RequestParam("file") MultipartFile file) {
-        return null;
-    }
-
-    @PostMapping("/sum")
-    public String sum(@RequestParam("file") MultipartFile file) {
-        return null;
-    }
-
-    @PostMapping("/multiply")
-    public String multiply(@RequestParam("file") MultipartFile file) {
-        return null;
-    }
-
-    private BaseResponse uploadFile(MultipartFile file) {
-        UploadFileResponse uploadFileResponse = null;
-        BaseResponse response;
-
-        if (fileStorageService.hasCSVFormat(file)) {
-            try {
-                String fileName = fileStorageService.storeFile(file);
-
-                String fileDownloadUri = ServletUriComponentsBuilder.fromCurrentContextPath()
-                        .path("/downloadFile/")
-                        .path(fileName)
-                        .toUriString();
-                uploadFileResponse = new UploadFileResponse(fileName, fileDownloadUri, file.getContentType(), file.getSize());
-            } catch (Exception ex) {
-                ex.printStackTrace();
-                return new BaseResponse(HttpStatus.EXPECTATION_FAILED.value() + "", ex.getMessage());
-            }
+    public String invert(@RequestParam("file") MultipartFile file) throws CsvValidationException, IOException {
+        BaseResponse uploadFileResponse = fileStorageService.uploadFile(file);
+        String matrix = "";
+        if (uploadFileResponse.getStatus().equals("200")) {
+            matrix = this.csvFileProcessorService.invert();
         }
+        return matrix;
+    }
 
-        response = uploadFileResponse != null ?
-                new BaseResponse(HttpStatus.OK.value() + "", "Successful", uploadFileResponse) :
-                new BaseResponse(HttpStatus.EXPECTATION_FAILED.value() + "", "Failed, please upload a valid CSV file");
+    /**
+     * Flatten and print the matrix representation of the supplied CSV file
+     * @param file
+     * @return
+     * @throws CsvValidationException
+     * @throws IOException
+     */
+    @PostMapping("/flatten")
+    public String flatten(@RequestParam("file") MultipartFile file) throws CsvValidationException, IOException {
+        BaseResponse uploadFileResponse = fileStorageService.uploadFile(file);
+        String matrix = "";
+        if (uploadFileResponse.getStatus().equals("200")) {
+            matrix = this.csvFileProcessorService.flatten();
+        }
+        return matrix;
+    }
 
-        log.info("CSV File Upload Response : " + response.toString());
-        return response;
+    /**
+     * Sum and print all elements of the matrix representation in the supplied CSV file
+     * @param file
+     * @return
+     * @throws CsvValidationException
+     * @throws IOException
+     */
+    @PostMapping("/sum")
+    public String sum(@RequestParam("file") MultipartFile file) throws CsvValidationException, IOException {
+        BaseResponse uploadFileResponse = fileStorageService.uploadFile(file);
+        String sum = "";
+        if (uploadFileResponse.getStatus().equals("200")) {
+            sum = this.csvFileProcessorService.sum();
+        }
+        return String.valueOf(sum);
+    }
+
+    /**
+     * Multiply and print all elements of the matrix representation in the supplied CSV file
+     * @param file
+     * @return
+     * @throws CsvValidationException
+     * @throws IOException
+     */
+    @PostMapping("/multiply")
+    public String multiply(@RequestParam("file") MultipartFile file) throws CsvValidationException, IOException {
+        BaseResponse uploadFileResponse = fileStorageService.uploadFile(file);
+        String multiply = "";
+        if (uploadFileResponse.getStatus().equals("200")) {
+            multiply = this.csvFileProcessorService.multiply();
+        }
+        return String.valueOf(multiply);
     }
 }

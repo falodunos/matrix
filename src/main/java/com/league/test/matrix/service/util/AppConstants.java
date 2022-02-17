@@ -9,6 +9,10 @@ public class AppConstants {
     public static final String INTEGER_REGEX_PATTERN = "[+-]?[0-9]+";
 
 
+    /**
+     * Return the path of uploaded files
+     * @return String
+     */
     private static String getFileUploadPath() {
         String path = System.getProperty("user.dir") + "\\uploads\\";
         path = path.replace("\\", "/");
@@ -16,7 +20,7 @@ public class AppConstants {
     }
 
     public interface ApiResponseMessage {
-        String SUCCESSFUL = "Successfully processed";
-        String FAILED = "Failed request";
+        String SUCCESSFUL = "Successful";
+        String FAILED = "Failed";
     }
 }
