@@ -817,3 +817,317 @@ org.springframework.web.multipart.MultipartException: Current request is not a m
 
 2022-02-17 15:37:39.270  INFO 1368 --- [http-nio-8090-exec-9] c.l.t.matrix.service.FileStorageService  : CSV File Upload Response : BaseResponse{status=200, message='Successful', data=UploadFileResponse(fileName=matrix.csv, fileDownloadUri=http://localhost:8090/downloadFile/matrix.csv, fileType=text/csv, size=17)}
 2022-02-17 15:37:49.300  INFO 1368 --- [http-nio-8090-exec-10] c.l.t.matrix.service.FileStorageService  : CSV File Upload Response : BaseResponse{status=200, message='Successful', data=UploadFileResponse(fileName=matrix.csv, fileDownloadUri=http://localhost:8090/downloadFile/matrix.csv, fileType=text/csv, size=17)}
+2022-02-17 15:50:11.059  INFO 1368 --- [Thread-8] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-02-17 15:50:11.186  INFO 1368 --- [restartedMain] c.league.test.matrix.MatrixApplication   : Starting MatrixApplication on Olugbengas-MacBook-Pro.local with PID 1368 (/Users/olugbengafalodun/Documents/development/interview/League/matrix/target/classes started by olugbengafalodun in /Users/olugbengafalodun/Documents/development/interview/League/matrix)
+2022-02-17 15:50:11.186  INFO 1368 --- [restartedMain] c.league.test.matrix.MatrixApplication   : The following profiles are active: development
+2022-02-17 15:50:11.627  INFO 1368 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2022-02-17 15:50:11.632  INFO 1368 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-02-17 15:50:11.632  INFO 1368 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2022-02-17 15:50:11.644  INFO 1368 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-02-17 15:50:11.644  INFO 1368 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 457 ms
+2022-02-17 15:50:11.837  INFO 1368 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-02-17 15:50:11.949  INFO 1368 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-02-17 15:50:11.954  INFO 1368 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2022-02-17 15:50:11.985  INFO 1368 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2022-02-17 15:50:11.986  INFO 1368 --- [restartedMain] c.league.test.matrix.MatrixApplication   : Started MatrixApplication in 0.825 seconds (JVM running for 831.95)
+2022-02-17 15:50:11.992  INFO 1368 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-02-17 15:50:14.384  INFO 1622 --- [main] c.l.t.m.controller.ApiControllerTest     : Starting ApiControllerTest on Olugbengas-MacBook-Pro.local with PID 1622 (started by olugbengafalodun in /Users/olugbengafalodun/Documents/development/interview/League/matrix)
+2022-02-17 15:50:14.385  INFO 1622 --- [main] c.l.t.m.controller.ApiControllerTest     : The following profiles are active: development
+2022-02-17 15:50:16.004  INFO 1622 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-02-17 15:50:16.211  INFO 1622 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2022-02-17 15:50:16.211  INFO 1622 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2022-02-17 15:50:16.225  INFO 1622 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 14 ms
+2022-02-17 15:50:16.258  INFO 1622 --- [main] c.l.t.m.controller.ApiControllerTest     : Started ApiControllerTest in 2.238 seconds (JVM running for 3.074)
+2022-02-17 15:50:16.467  INFO 1622 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-02-17 15:52:17.159  INFO 1653 --- [main] c.league.test.matrix.MatrixApplication   : Starting MatrixApplication v0.0.1-SNAPSHOT on Olugbengas-MacBook-Pro.local with PID 1653 (/Users/olugbengafalodun/Documents/development/interview/League/matrix/target/matrix-0.0.1-SNAPSHOT.jar started by olugbengafalodun in /Users/olugbengafalodun/Documents/development/interview/League/matrix)
+2022-02-17 15:52:17.162  INFO 1653 --- [main] c.league.test.matrix.MatrixApplication   : The following profiles are active: development
+2022-02-17 15:52:18.565  INFO 1653 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2022-02-17 15:52:18.612  INFO 1653 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-02-17 15:52:18.612  INFO 1653 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2022-02-17 15:52:18.634  INFO 1653 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/olugbengafalodun/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2022-02-17 15:52:18.766  INFO 1653 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-02-17 15:52:18.766  INFO 1653 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1530 ms
+2022-02-17 15:52:19.436  INFO 1653 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-02-17 15:52:19.750  INFO 1653 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2022-02-17 15:52:19.834 ERROR 1653 --- [main] org.apache.catalina.util.LifecycleBase   : Failed to start component [Connector[HTTP/1.1-8090]]
+
+org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1008) ~[tomcat-embed-core-9.0.16.jar!/:9.0.16]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.16.jar!/:9.0.16]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:226) [tomcat-embed-core-9.0.16.jar!/:9.0.16]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:259) [spring-boot-2.1.3.RELEASE.jar!/:2.1.3.RELEASE]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:197) [spring-boot-2.1.3.RELEASE.jar!/:2.1.3.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.startWebServer(ServletWebServerApplicationContext.java:311) [spring-boot-2.1.3.RELEASE.jar!/:2.1.3.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:164) [spring-boot-2.1.3.RELEASE.jar!/:2.1.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:552) [spring-context-5.1.5.RELEASE.jar!/:5.1.5.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142) [spring-boot-2.1.3.RELEASE.jar!/:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775) [spring-boot-2.1.3.RELEASE.jar!/:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.1.3.RELEASE.jar!/:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) [spring-boot-2.1.3.RELEASE.jar!/:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260) [spring-boot-2.1.3.RELEASE.jar!/:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248) [spring-boot-2.1.3.RELEASE.jar!/:2.1.3.RELEASE]
+	at com.league.test.matrix.MatrixApplication.main(MatrixApplication.java:10) [classes!/:0.0.1-SNAPSHOT]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_311]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_311]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_311]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_311]
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:48) [matrix-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:87) [matrix-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:50) [matrix-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:51) [matrix-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+Caused by: java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method) ~[na:1.8.0_311]
+	at sun.nio.ch.Net.bind(Net.java:438) ~[na:1.8.0_311]
+	at sun.nio.ch.Net.bind(Net.java:430) ~[na:1.8.0_311]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:225) ~[na:1.8.0_311]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74) ~[na:1.8.0_311]
+	at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:236) ~[tomcat-embed-core-9.0.16.jar!/:9.0.16]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210) ~[tomcat-embed-core-9.0.16.jar!/:9.0.16]
+	at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1085) ~[tomcat-embed-core-9.0.16.jar!/:9.0.16]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1171) ~[tomcat-embed-core-9.0.16.jar!/:9.0.16]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:568) ~[tomcat-embed-core-9.0.16.jar!/:9.0.16]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1005) ~[tomcat-embed-core-9.0.16.jar!/:9.0.16]
+	... 22 common frames omitted
+
+2022-02-17 15:52:19.906  INFO 1653 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-02-17 15:52:19.926  INFO 1653 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-02-17 15:52:19.929 ERROR 1653 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8090 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8090, or configure this application to listen on another port.
+
+2022-02-17 15:52:19.936  INFO 1653 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-02-17 15:53:37.230  INFO 1368 --- [Thread-12] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-02-17 15:53:37.421  INFO 1368 --- [restartedMain] c.league.test.matrix.MatrixApplication   : Starting MatrixApplication on Olugbengas-MacBook-Pro.local with PID 1368 (/Users/olugbengafalodun/Documents/development/interview/League/matrix/target/classes started by olugbengafalodun in /Users/olugbengafalodun/Documents/development/interview/League/matrix)
+2022-02-17 15:53:37.421  INFO 1368 --- [restartedMain] c.league.test.matrix.MatrixApplication   : The following profiles are active: development
+2022-02-17 15:53:38.008  INFO 1666 --- [restartedMain] c.league.test.matrix.MatrixApplication   : Starting MatrixApplication on Olugbengas-MacBook-Pro.local with PID 1666 (/Users/olugbengafalodun/Documents/development/interview/League/matrix/target/classes started by olugbengafalodun in /Users/olugbengafalodun/Documents/development/interview/League/matrix)
+2022-02-17 15:53:38.014  INFO 1666 --- [restartedMain] c.league.test.matrix.MatrixApplication   : The following profiles are active: development
+2022-02-17 15:53:38.062  INFO 1368 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2022-02-17 15:53:38.064  INFO 1368 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-02-17 15:53:38.065  INFO 1368 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2022-02-17 15:53:38.100  INFO 1368 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-02-17 15:53:38.102  INFO 1368 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 678 ms
+2022-02-17 15:53:38.126  INFO 1666 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-02-17 15:53:38.127  INFO 1666 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-02-17 15:53:38.401  INFO 1368 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-02-17 15:53:38.560  INFO 1368 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-02-17 15:53:38.565  INFO 1368 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2022-02-17 15:53:38.646  INFO 1368 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2022-02-17 15:53:38.649  INFO 1368 --- [restartedMain] c.league.test.matrix.MatrixApplication   : Started MatrixApplication in 1.26 seconds (JVM running for 1038.607)
+2022-02-17 15:53:38.658  INFO 1368 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-02-17 15:53:40.999  INFO 1666 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2022-02-17 15:53:41.030  INFO 1666 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-02-17 15:53:41.031  INFO 1666 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2022-02-17 15:53:41.043  INFO 1666 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/olugbengafalodun/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2022-02-17 15:53:41.117  INFO 1666 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-02-17 15:53:41.118  INFO 1666 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2976 ms
+2022-02-17 15:53:41.724  INFO 1666 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-02-17 15:53:42.070  WARN 1666 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-02-17 15:53:42.080  INFO 1666 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2022-02-17 15:53:42.147 ERROR 1666 --- [restartedMain] org.apache.catalina.util.LifecycleBase   : Failed to start component [Connector[HTTP/1.1-8090]]
+
+org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1008) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:226) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:259) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:197) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.startWebServer(ServletWebServerApplicationContext.java:311) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:164) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:552) [spring-context-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at com.league.test.matrix.MatrixApplication.main(MatrixApplication.java:10) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_311]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_311]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_311]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_311]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+Caused by: java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method) ~[na:1.8.0_311]
+	at sun.nio.ch.Net.bind(Net.java:438) ~[na:1.8.0_311]
+	at sun.nio.ch.Net.bind(Net.java:430) ~[na:1.8.0_311]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:225) ~[na:1.8.0_311]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74) ~[na:1.8.0_311]
+	at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:236) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1085) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1171) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:568) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1005) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	... 19 common frames omitted
+
+2022-02-17 15:53:42.153  INFO 1666 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-02-17 15:53:42.164  INFO 1666 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-02-17 15:53:42.167 ERROR 1666 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8090 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8090, or configure this application to listen on another port.
+
+2022-02-17 15:53:42.171  INFO 1666 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-02-17 16:04:36.915  INFO 1368 --- [Thread-18] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-02-17 16:04:37.336  INFO 1368 --- [restartedMain] c.league.test.matrix.MatrixApplication   : Starting MatrixApplication on Olugbengas-MacBook-Pro.local with PID 1368 (/Users/olugbengafalodun/Documents/development/interview/League/matrix/target/classes started by olugbengafalodun in /Users/olugbengafalodun/Documents/development/interview/League/matrix)
+2022-02-17 16:04:37.336  INFO 1368 --- [restartedMain] c.league.test.matrix.MatrixApplication   : The following profiles are active: development
+2022-02-17 16:04:38.008  INFO 1754 --- [restartedMain] c.league.test.matrix.MatrixApplication   : Starting MatrixApplication on Olugbengas-MacBook-Pro.local with PID 1754 (/Users/olugbengafalodun/Documents/development/interview/League/matrix/target/classes started by olugbengafalodun in /Users/olugbengafalodun/Documents/development/interview/League/matrix)
+2022-02-17 16:04:38.016  INFO 1754 --- [restartedMain] c.league.test.matrix.MatrixApplication   : The following profiles are active: development
+2022-02-17 16:04:38.108  INFO 1368 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2022-02-17 16:04:38.115  INFO 1368 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-02-17 16:04:38.116  INFO 1368 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2022-02-17 16:04:38.158  INFO 1754 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-02-17 16:04:38.159  INFO 1754 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-02-17 16:04:38.175  INFO 1368 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-02-17 16:04:38.175  INFO 1368 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 836 ms
+2022-02-17 16:04:38.494  INFO 1368 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-02-17 16:04:38.703  INFO 1368 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-02-17 16:04:38.710  INFO 1368 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2022-02-17 16:04:38.783  INFO 1368 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2022-02-17 16:04:38.784  INFO 1368 --- [restartedMain] c.league.test.matrix.MatrixApplication   : Started MatrixApplication in 1.624 seconds (JVM running for 1698.686)
+2022-02-17 16:04:38.790  INFO 1368 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-02-17 16:04:40.209  INFO 1754 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2022-02-17 16:04:40.243  INFO 1754 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-02-17 16:04:40.244  INFO 1754 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2022-02-17 16:04:40.256  INFO 1754 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/olugbengafalodun/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2022-02-17 16:04:40.346  INFO 1754 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-02-17 16:04:40.346  INFO 1754 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2186 ms
+2022-02-17 16:04:40.920  INFO 1754 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-02-17 16:04:41.203  WARN 1754 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-02-17 16:04:41.211  INFO 1754 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2022-02-17 16:04:41.271 ERROR 1754 --- [restartedMain] org.apache.catalina.util.LifecycleBase   : Failed to start component [Connector[HTTP/1.1-8090]]
+
+org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1008) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:226) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:259) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:197) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.startWebServer(ServletWebServerApplicationContext.java:311) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:164) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:552) [spring-context-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at com.league.test.matrix.MatrixApplication.main(MatrixApplication.java:10) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_311]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_311]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_311]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_311]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+Caused by: java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method) ~[na:1.8.0_311]
+	at sun.nio.ch.Net.bind(Net.java:438) ~[na:1.8.0_311]
+	at sun.nio.ch.Net.bind(Net.java:430) ~[na:1.8.0_311]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:225) ~[na:1.8.0_311]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74) ~[na:1.8.0_311]
+	at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:236) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1085) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1171) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:568) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1005) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	... 19 common frames omitted
+
+2022-02-17 16:04:41.276  INFO 1754 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-02-17 16:04:41.286  INFO 1754 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-02-17 16:04:41.288 ERROR 1754 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8090 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8090, or configure this application to listen on another port.
+
+2022-02-17 16:04:41.292  INFO 1754 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-02-17 16:05:03.012  INFO 1368 --- [Thread-31] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-02-17 16:05:33.391  INFO 1789 --- [main] c.league.test.matrix.MatrixApplication   : Starting MatrixApplication v0.0.1-SNAPSHOT on Olugbengas-MacBook-Pro.local with PID 1789 (/Users/olugbengafalodun/Documents/development/interview/League/matrix/target/matrix-0.0.1-SNAPSHOT.jar started by olugbengafalodun in /Users/olugbengafalodun/Documents/development/interview/League/matrix)
+2022-02-17 16:05:33.392  INFO 1789 --- [main] c.league.test.matrix.MatrixApplication   : The following profiles are active: development
+2022-02-17 16:05:35.012  INFO 1789 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2022-02-17 16:05:35.059  INFO 1789 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-02-17 16:05:35.060  INFO 1789 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2022-02-17 16:05:35.079  INFO 1789 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/olugbengafalodun/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2022-02-17 16:05:35.198  INFO 1789 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-02-17 16:05:35.198  INFO 1789 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1745 ms
+2022-02-17 16:05:35.850  INFO 1789 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-02-17 16:05:36.156  INFO 1789 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2022-02-17 16:05:36.243  INFO 1789 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2022-02-17 16:05:36.247  INFO 1789 --- [main] c.league.test.matrix.MatrixApplication   : Started MatrixApplication in 3.459 seconds (JVM running for 3.997)
+2022-02-17 16:06:00.340  INFO 1789 --- [http-nio-8090-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-02-17 16:06:00.341  INFO 1789 --- [http-nio-8090-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-02-17 16:06:00.351  INFO 1789 --- [http-nio-8090-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2022-02-17 16:06:00.447  INFO 1789 --- [http-nio-8090-exec-2] c.l.t.matrix.service.FileStorageService  : CSV File Upload Response : BaseResponse{status=200, message='Successful', data=UploadFileResponse(fileName=matrix.csv, fileDownloadUri=http://localhost:8090/downloadFile/matrix.csv, fileType=text/csv, size=17)}
+2022-02-17 16:06:06.080  INFO 1789 --- [http-nio-8090-exec-3] c.l.t.matrix.service.FileStorageService  : CSV File Upload Response : BaseResponse{status=200, message='Successful', data=UploadFileResponse(fileName=matrix.csv, fileDownloadUri=http://localhost:8090/downloadFile/matrix.csv, fileType=text/csv, size=17)}
+2022-02-17 16:06:32.905  INFO 1789 --- [Thread-5] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-02-17 16:09:54.212  INFO 1826 --- [main] c.league.test.matrix.MatrixApplication   : Starting MatrixApplication v0.0.1-SNAPSHOT on Olugbengas-MacBook-Pro.local with PID 1826 (/Users/olugbengafalodun/Documents/development/interview/League/matrix/compiled-jar/matrix-0.0.1-SNAPSHOT.jar started by olugbengafalodun in /Users/olugbengafalodun/Documents/development/interview/League/matrix)
+2022-02-17 16:09:54.215  INFO 1826 --- [main] c.league.test.matrix.MatrixApplication   : The following profiles are active: development
+2022-02-17 16:09:55.796  INFO 1826 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2022-02-17 16:09:55.835  INFO 1826 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-02-17 16:09:55.836  INFO 1826 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2022-02-17 16:09:55.852  INFO 1826 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/olugbengafalodun/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2022-02-17 16:09:55.970  INFO 1826 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-02-17 16:09:55.970  INFO 1826 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1658 ms
+2022-02-17 16:09:56.659  INFO 1826 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-02-17 16:09:56.968  INFO 1826 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2022-02-17 16:09:57.046  INFO 1826 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2022-02-17 16:09:57.050  INFO 1826 --- [main] c.league.test.matrix.MatrixApplication   : Started MatrixApplication in 3.623 seconds (JVM running for 4.14)
+2022-02-17 16:10:12.684  INFO 1826 --- [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-02-17 16:10:12.685  INFO 1826 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-02-17 16:10:12.692  INFO 1826 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2022-02-17 16:10:12.753  INFO 1826 --- [http-nio-8090-exec-1] c.l.t.matrix.service.FileStorageService  : CSV File Upload Response : BaseResponse{status=417, message='Failed, please upload a valid CSV file', data=null}
+2022-02-17 16:10:41.841  INFO 1826 --- [http-nio-8090-exec-2] c.l.t.matrix.service.FileStorageService  : CSV File Upload Response : BaseResponse{status=417, message='Failed, please upload a valid CSV file', data=null}
+2022-02-17 16:10:59.927  INFO 1826 --- [http-nio-8090-exec-4] c.l.t.matrix.service.FileStorageService  : CSV File Upload Response : BaseResponse{status=200, message='Successful', data=UploadFileResponse(fileName=matrix.csv, fileDownloadUri=http://localhost:8090/downloadFile/matrix.csv, fileType=text/csv, size=17)}
+2022-02-17 16:11:01.718  INFO 1826 --- [http-nio-8090-exec-5] c.l.t.matrix.service.FileStorageService  : CSV File Upload Response : BaseResponse{status=200, message='Successful', data=UploadFileResponse(fileName=matrix.csv, fileDownloadUri=http://localhost:8090/downloadFile/matrix.csv, fileType=text/csv, size=17)}
+2022-02-17 16:11:02.826  INFO 1826 --- [http-nio-8090-exec-6] c.l.t.matrix.service.FileStorageService  : CSV File Upload Response : BaseResponse{status=200, message='Successful', data=UploadFileResponse(fileName=matrix.csv, fileDownloadUri=http://localhost:8090/downloadFile/matrix.csv, fileType=text/csv, size=17)}
+2022-02-17 16:11:45.000  INFO 1826 --- [http-nio-8090-exec-7] c.l.t.matrix.service.FileStorageService  : CSV File Upload Response : BaseResponse{status=417, message='Failed, please upload a valid CSV file', data=null}
+2022-02-17 16:19:50.774  INFO 1826 --- [Thread-5] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-02-17 16:22:43.086  INFO 1993 --- [restartedMain] c.league.test.matrix.MatrixApplication   : Starting MatrixApplication on Olugbengas-MacBook-Pro.local with PID 1993 (/Users/olugbengafalodun/Documents/development/interview/League/matrix/target/classes started by olugbengafalodun in /Users/olugbengafalodun/Documents/development/interview/League/matrix)
+2022-02-17 16:22:43.089  INFO 1993 --- [restartedMain] c.league.test.matrix.MatrixApplication   : The following profiles are active: development
+2022-02-17 16:22:43.177  INFO 1993 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-02-17 16:22:43.177  INFO 1993 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-02-17 16:22:44.826  INFO 1993 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2022-02-17 16:22:44.856  INFO 1993 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-02-17 16:22:44.856  INFO 1993 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2022-02-17 16:22:44.874  INFO 1993 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/olugbengafalodun/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2022-02-17 16:22:44.969  INFO 1993 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-02-17 16:22:44.970  INFO 1993 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1791 ms
+2022-02-17 16:22:45.517  INFO 1993 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-02-17 16:22:45.932  INFO 1993 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-02-17 16:22:45.942  INFO 1993 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2022-02-17 16:22:46.075  INFO 1993 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2022-02-17 16:22:46.079  INFO 1993 --- [restartedMain] c.league.test.matrix.MatrixApplication   : Started MatrixApplication in 3.634 seconds (JVM running for 4.13)
+2022-02-17 16:22:53.270  INFO 1993 --- [Thread-9] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'

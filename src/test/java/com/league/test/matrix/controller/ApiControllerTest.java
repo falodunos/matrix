@@ -45,7 +45,7 @@ public class ApiControllerTest {
             "file", "matrix.csv",
             MediaType.TEXT_PLAIN_VALUE, "1,2,3\n4,5,6\n7,8,9".getBytes());
 
-    UploadFileResponse uploadFileResponse = new UploadFileResponse("matrix.csv", "url", "text/csv", 17);
+    UploadFileResponse uploadFileResponse = new UploadFileResponse("matrix.csv", "http://localhost:8090/downloadFile/matrix.csv", "text/csv", 17);
     BaseResponse response = new BaseResponse(HttpStatus.OK.value() + "", AppConstants.ApiResponseMessage.SUCCESSFUL, uploadFileResponse);
 
 
