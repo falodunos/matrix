@@ -1,0 +1,438 @@
+{
+	"info": {
+		"_postman_id": "1476159f-7bdd-46e8-bbdd-f01564ef7aa0",
+		"name": "Matrix Service API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Echo Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/olugbengafalodun/Desktop/matrixED.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8090/api/matrix/v1/echo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"matrix",
+						"v1",
+						"echo"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Echo Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/Users/olugbengafalodun/Desktop/matrixED.csv"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8090/api/matrix/v1/uploadFile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"matrix",
+								"v1",
+								"uploadFile"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 15 Feb 2022 20:39:15 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"200 OK\",\n    \"message\": \"Successful\",\n    \"data\": {\n        \"fileName\": \"matrix.csv\",\n        \"fileDownloadUri\": \"http://localhost:8090/downloadFile/matrix.csv\",\n        \"fileType\": \"text/csv\",\n        \"size\": 17\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Invert Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/olugbengafalodun/Desktop/matrixED.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8090/api/matrix/v1/invert",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"matrix",
+						"v1",
+						"invert"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Invert Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/Users/olugbengafalodun/Desktop/matrixED.csv"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8090/api/matrix/v1/invert",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"matrix",
+								"v1",
+								"invert"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "17"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 16 Feb 2022 04:15:16 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "1,4,7\n2,5,8\n3,6,9"
+				}
+			]
+		},
+		{
+			"name": "Flatten",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/olugbengafalodun/Desktop/matrixED.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8090/api/matrix/v1/flatten",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"matrix",
+						"v1",
+						"flatten"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Flatten",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/Users/olugbengafalodun/Desktop/matrixED.csv"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8090/api/matrix/v1/flatten",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"matrix",
+								"v1",
+								"flatten"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "17"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 16 Feb 2022 13:02:34 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "1,2,3,4,5,6,7,8,9"
+				}
+			]
+		},
+		{
+			"name": "Sum",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/olugbengafalodun/Desktop/matrixED.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8090/api/matrix/v1/sum",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"matrix",
+						"v1",
+						"sum"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/Users/olugbengafalodun/Desktop/matrixED.csv"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8090/api/matrix/v1/sum",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"matrix",
+								"v1",
+								"sum"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 16 Feb 2022 13:14:09 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "45"
+				}
+			]
+		},
+		{
+			"name": "Multiply",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/olugbengafalodun/Desktop/matrixED.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8090/api/matrix/v1/multiply",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"matrix",
+						"v1",
+						"multiply"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Multiply",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/Users/olugbengafalodun/Desktop/matrixED.csv"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8090/api/matrix/v1/multiply",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"matrix",
+								"v1",
+								"multiply"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 16 Feb 2022 13:16:52 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "362880"
+				}
+			]
+		}
+	]
+}
