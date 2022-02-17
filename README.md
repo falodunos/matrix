@@ -94,3 +94,9 @@ java -jar matrix-0.0.1-SNAPSHOT.jar
 ```
 NOTE: sample request / response is available in screenshot folder at project root directory
 ```
+
+### DOWNLOADING THE PROJECT
+
+```
+git clone https://github.com/falodunos/matrix.git
+```
